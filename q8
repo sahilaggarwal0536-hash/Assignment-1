@@ -1,0 +1,16 @@
+# Linear search
+n = int(input("Enter number of elements: "))
+arr = []
+
+for i in range(n):
+    num = int(input("Enter element: "))
+    arr.append(num)
+
+key = int(input("Enter number to search: "))
+
+for i in range(n):
+    if arr[i] == key:
+        print("Number found at position", i+1)
+        break
+else:
+    print("Number not found")

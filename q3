@@ -1,0 +1,20 @@
+# Find roots of quadratic equation ax^2 + bx + c = 0
+import math
+
+a = float(input("Enter value of a: "))
+b = float(input("Enter value of b: "))
+c = float(input("Enter value of c: "))
+
+d = b**2 - 4*a*c  # Discriminant
+
+if d > 0:
+    r1 = (-b + math.sqrt(d)) / (2*a)
+    r2 = (-b - math.sqrt(d)) / (2*a)
+    print("Two real and different roots:", r1, "and", r2)
+elif d == 0:
+    r = -b / (2*a)
+    print("Two real and equal roots:", r)
+else:
+    real = -b / (2*a)
+    imag = math.sqrt(-d) / (2*a)
+    print("Complex roots:", real, "+", imag, "i and", real, "-", imag, "i")
